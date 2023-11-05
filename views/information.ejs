@@ -1,0 +1,35 @@
+<%- include('header') -%>
+<div class="container">
+    <div class="content">
+        <img src="https://res.cloudinary.com/debbsefe/image/upload/f_auto,c_fill,dpr_auto,e_grayscale/image_fz7n7w.webp" alt="header-image" class="cld-responsive">
+        <!-- <img src="../public/assets/background_png_1.jpeg" alt="header-image" width="100" height="100"> -->
+
+        <h1 class="form-title">Information Form</h1>
+        <form action="/create_info" method="POST" class="pt-3">
+            <input type="text" placeholder="Name" name="name">
+            <input type="number" placeholder="Age" name="age">
+            <input type="text" placeholder="Gender" name="gender">
+            <!-- <div class="beside">
+                <input type="number" placeholder="PHONE NUMBER">
+                <select name="Gener">
+                    <option>Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Transgender</option>
+                </select>
+            </div> -->
+            <input type="email" placeholder="Email Address" name="email">
+            <input type="text" placeholder="Food Choice" name="foodchoice">
+            <input type="text" placeholder="Tourism Location" name="tourismlocation">
+            <input type="text" placeholder="Travel Companions" name="travelcompanions">
+            <input type="text" placeholder="Health Issue" name="healthissue">
+            <input type="text" placeholder="Transportaion Preferences" name="transportaionpreferences">
+            <input type="text" placeholder="Accommodation Choices" name="accommodationchoices">
+            <input type="file" placeholder="Upload Image" name="file">
+            <br>
+            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+            </form>
+        </div>
+</div>
+
+<%- include('footer') -%>

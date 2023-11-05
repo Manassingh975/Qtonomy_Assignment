@@ -1,0 +1,60 @@
+<%- include('header') -%>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<main>
+	<h1>SEARCH BOX</h1>
+	
+	<form accept="/admin" method="post">
+        <input type="text" placeholder="Search.." name="search" width="50">
+        <button type="submit">Sumit</i></button>
+    </form>
+
+    <div>
+        <h1> Information List </h1>
+    </div>
+    <% if (infos.length) { %>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>gender</th>
+                <th>email</th>
+                <th>food_choice</th>
+                <th>tourism_location</th>
+                <th>Travel_companions</th>
+                <th>health_issue</th>
+                <th>Transportation_preferences</th>
+                <th>Accommodation_choices</th>
+                <th>created_at</th>
+            </tr>
+            <% infos.forEach(function(element) { %>
+                <tr>
+                    <td><%= element.id %></td>
+                    <td><%= element.name %></td>
+                    <td><%= element.age %></td>
+                    <td><%= element.gender %></td>
+                    <td><%= element.email %></td>
+                    <td><%= element.food_choice %></td>
+                    <td><%= element.tourism_location %></td>
+                    <td><%= element.Travel_companions %></td>
+                    <td><%= element.health_issue %></td>
+                    <td><%= element.Transportation_preferences %></td>
+                    <td><%= element.Accommodation_choices %></td>
+                    <td><%= element.created_at %></td>
+                </tr>
+            <% }) %>
+        </table>
+        
+        
+        
+    <% } else { %>
+        <div>No information Avaliable</div>
+    <% } %>
+    
+	
+</main>
+
+<%- include('footer') -%>
